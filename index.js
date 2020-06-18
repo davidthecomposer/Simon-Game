@@ -7,7 +7,7 @@ let level = 0;
 $('.btn').click(function () {
     let userChosenColor = this.id;
     userClickedPattern.push(userChosenColor);
-    console.log(userClickedPattern);
+   
     playSound(userChosenColor);
     animatedPress(userChosenColor);
     if (userClickedPattern.length === gamePattern.length) {
@@ -40,12 +40,17 @@ const nextSequence = () => {
     $('h1').text(`Level ${level}`);
 };
 
-$('body').on('keypress', ()=> {
+$('.start-game').on('click', ()=> {
     gamePattern = [];
     $('body').removeClass('game-over');
     nextSequence();
     $('h1').text(`Level ${level}`);
+    $('.start-game').prop('disabled', true);
+    $('.start-game').text('Good Luck');
 });
+
+
+
 
 const checkAnswer = () => {
     userClickedPattern.toString() === gamePattern.toString() ? setTimeout(() => {nextSequence()}, 1000)  : gameOver();
@@ -53,8 +58,10 @@ const checkAnswer = () => {
 
 const gameOver = () => {
     $('body').addClass('game-over');
-    $('h1').text(`Wrong... Press a key to play again.`);
+    $('h1').html(`Wrong. Press Start To Re-try`);
     gameOverSound = new Audio('sounds/wrong.mp3');
     gameOverSound.play();
     level = 0;
+    $('.start-game').prop('disabled', false);
+    $('.start-game').text('Start');
 }

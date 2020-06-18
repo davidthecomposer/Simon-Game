@@ -1,48 +1,66 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<title>Simon</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+			rel="stylesheet"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/Favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/Favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/Favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/Favicon/site.webmanifest" />
+		<link
+			rel="mask-icon"
+			href="/Favicon/safari-pinned-tab.svg"
+			color="#143a51"
+		/>
+		<meta name="msapplication-TileColor" content="#143a51" />
+		<meta name="theme-color" content="#ffffff" />
+	</head>
 
-<head>
-  <meta charset="utf-8">
-  <title>Simon</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-</head>
+	<body>
+		<h1 id="level-title">Press Start Button to Play</h1>
+		<div class="by-me">
+			<p>A</p>
+			<img
+				class="signature"
+				src="images/david-sig-white-shadow.svg"
+				alt="signature"
+			/>
+			<p>Game</p>
+		</div>
+		<div class="container">
+			<div lass="row">
+				<div type="button" id="green" class="btn green"></div>
 
-<body>
-  <h1 id="level-title">Press A Key to Start</h1>
-  <div class="container">
-    <div lass="row">
+				<div type="button" id="red" class="btn red"></div>
+			</div>
 
-      <div type="button" id="green" class="btn green">
+			<div class="row">
+				<div type="button" id="yellow" class="btn yellow"></div>
+				<div type="button" id="blue" class="btn blue"></div>
+			</div>
+			<button class="start-game">Start</button>
+		</div>
 
-      </div>
-
-      <div type="button" id="red" class="btn red">
-
-      </div>
-    </div>
-
-    <div class="row">
-
-      <div type="button" id="yellow" class="btn yellow">
-
-      </div>
-      <div type="button" id="blue" class="btn blue">
-
-      </div>
-
-    </div>
-    <div class="by-me">
-      <p>A</p>
-      <img class="signature" src="/David Campbell Website/images/main/david-sig-white.svg" alt="">
-      <p>Game</p>
-  </div>
-  </div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="index.js"></script>
-
-
-</body>
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="index.js"></script>
+	</body>
 </html>
